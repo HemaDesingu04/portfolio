@@ -41,7 +41,7 @@ export class ContactComponent {
     this.sending = true;
     this.error = false;
 
-    this.http.post('http://localhost:8080/api/contact', {
+    this.http.post('https://portfolio-backend-b2mv.onrender.com/api/contact', {
       name: form.value.name,
       email: form.value.email,
       message: form.value.message
