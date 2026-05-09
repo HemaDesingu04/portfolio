@@ -44,6 +44,3 @@ Thumbs.db
 # Spring Boot
 portfolio-backend/target/
 portfolio-backend/.mvn/
-
-# Sensitive
-portfolio-backend/src/main/resources/application.properties
