@@ -1,0 +1,18 @@
+<section id="achievements">
+  <h2>Achievements</h2>
+  <div class="grid">
+    <div class="card" *ngFor="let a of achievements">
+      <span class="date">{{ a.date }}</span>
+      <h3>{{ a.title }}</h3>
+      <p>{{ a.description }}</p>
+      <div class="photos" *ngIf="a.photos.length">
+        <img *ngFor="let photo of a.photos" [src]="photo" (click)="openLightbox(photo)" alt="achievement photo" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" *ngIf="lightboxSrc" (click)="closeLightbox()">
+  <button class="lightbox-close" (click)="closeLightbox()">✕</button>
+  <img [src]="lightboxSrc" (click)="$event.stopPropagation()" />
+</div>

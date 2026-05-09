@@ -1,0 +1,23 @@
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="wrapper">
+    <div class="info">
+      <p>Have a project in mind or just want to say hi? Feel free to reach out — I'm always open to new opportunities and collaborations.</p>
+      <div class="links">
+        <a href="mailto:you@email.com">📧 you@email.com</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank">🐙 GitHub</a>
+      </div>
+    </div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <input name="name" ngModel required placeholder="Your Name" />
+      <input name="email" ngModel required type="email" placeholder="Your Email" />
+      <textarea name="message" ngModel required placeholder="Your Message"></textarea>
+      <button type="submit" [disabled]="sending">
+        {{ sending ? 'Sending...' : 'Send Message' }}
+      </button>
+      <p class="success" *ngIf="sent">✅ Message sent! I'll get back to you soon.</p>
+      <p class="error" *ngIf="error">❌ Something went wrong. Please try again.</p>
+    </form>
+  </div>
+</section>

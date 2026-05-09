@@ -1,0 +1,16 @@
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card" *ngFor="let p of projects">
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.description }}</p>
+      <div class="tags">
+        <span class="tag" *ngFor="let t of p.tags">{{ t }}</span>
+      </div>
+      <div class="links">
+        <a [href]="p.demo" target="_blank">Live Demo ↗</a>
+        <a [href]="p.code" target="_blank">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>

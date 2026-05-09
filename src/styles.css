@@ -1,0 +1,55 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body[data-theme='dark'] {
+  --bg: #040810;
+  --surface: #081018;
+  --surface2: #0c1a28;
+  --border: #143050;
+  --accent: #2dd4bf;
+  --accent-soft: #818cf8;
+  --text: #e0fff8;
+  --muted: #5a9a90;
+  --card-bg: #081018;
+  --tag-bg: #0c1a28;
+  --tag-color: #2dd4bf;
+  --hero-bg: radial-gradient(ellipse at 20% 50%, #0c1a28 0%, #040810 65%);
+  --btn-text: #040810;
+}
+
+body[data-theme='light'] {
+  --bg: #f0fdfa;
+  --surface: #ffffff;
+  --surface2: #ccfbf1;
+  --border: #99f6e4;
+  --accent: #0d9488;
+  --accent-soft: #2dd4bf;
+  --text: #022c28;
+  --muted: #3a7a74;
+  --card-bg: #ffffff;
+  --tag-bg: #ccfbf1;
+  --tag-color: #0f766e;
+  --hero-bg: radial-gradient(ellipse at 20% 50%, #ccfbf1 0%, #f0fdfa 65%);
+  --btn-text: #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+section { padding: 80px 10%; }
+
+@media (max-width: 768px) { section { padding: 60px 6%; } }
+@media (max-width: 480px) { section { padding: 50px 5%; } }
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--accent);
+}
+
+@media (max-width: 480px) { h2 { font-size: 1.6rem; } }

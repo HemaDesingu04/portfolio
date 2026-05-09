@@ -1,0 +1,77 @@
+HOW TO ADD YOUR ACHIEVEMENTS
+=============================
+
+File to edit:
+  src/app/components/achievements/achievements.component.ts
+
+Find this section in the file and replace it with your own data:
+
+-------------------------------------------------------------------
+
+  achievements: Achievement[] = [
+    {
+      title: 'Your First Achievement Title',
+      description: 'Write a short description of what you achieved here.',
+      date: 'Jan 2024',
+      photos: []   // no photos
+    },
+    {
+      title: 'Your Second Achievement Title',
+      description: 'Another description of your achievement.',
+      date: 'Mar 2024',
+      photos: ['assets/photo1.jpg']   // one photo
+    },
+    {
+      title: 'Your Third Achievement Title',
+      description: 'Description of your third achievement.',
+      date: 'Jun 2024',
+      photos: ['assets/photo2.jpg', 'assets/photo3.jpg']   // multiple photos
+    }
+  ];
+
+-------------------------------------------------------------------
+
+HOW TO ADD PHOTOS
+==================
+
+1. Copy your image files into this folder:
+      src/assets/
+
+2. Reference them in the photos array like this:
+      photos: ['assets/your-image-name.jpg']
+
+3. You can add as many photos as you want per achievement:
+      photos: ['assets/img1.jpg', 'assets/img2.jpg', 'assets/img3.jpg']
+
+4. If you have no photos for an achievement, just leave it empty:
+      photos: []
+
+
+SUPPORTED IMAGE FORMATS
+========================
+  .jpg  .jpeg  .png  .webp  .gif
+
+
+EXAMPLE WITH REAL DATA
+=======================
+
+  achievements: Achievement[] = [
+    {
+      title: 'Best Final Year Project Award',
+      description: 'Won 1st place at the university final year project exhibition among 50+ teams.',
+      date: 'May 2024',
+      photos: ['assets/fyp-award.jpg']
+    },
+    {
+      title: 'Hackathon Winner',
+      description: 'Won the 24-hour national hackathon organized by IEEE Sri Lanka.',
+      date: 'Feb 2024',
+      photos: ['assets/hackathon1.jpg', 'assets/hackathon2.jpg']
+    },
+    {
+      title: 'AWS Certified Developer',
+      description: 'Passed the AWS Certified Developer Associate exam.',
+      date: 'Dec 2023',
+      photos: ['assets/aws-cert.jpg']
+    }
+  ];
